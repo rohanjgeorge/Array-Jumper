@@ -1,5 +1,6 @@
 #pragma once
 #include "LevelModel.h"
+#include "LevelData.h"
 #include "LevelController.h"
 #include "../../header/UI/UIElement/ImageView.h"
 

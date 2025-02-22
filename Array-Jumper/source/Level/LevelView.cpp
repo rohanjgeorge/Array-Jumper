@@ -1,6 +1,5 @@
 #include "../../header/Level/LevelView.h"
 #include "../../header/Level/LevelModel.h"
-#include "../../header/Level/LevelData.h"
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/Global/Config.h"
 
@@ -93,7 +92,6 @@ namespace Level
 		{
 			sf::Vector2f position = calculateBoxPosition(i);
 			BlockType blockTypeToDraw = level_controller->getCurrentBoxValue(i);
-
 
 			drawBox(position);
 			drawBoxValue(position, blockTypeToDraw);
