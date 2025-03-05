@@ -39,6 +39,11 @@ namespace UI
             }
         }
 
+        void ImageView::setSprite(sf::Sprite image_sprite_new)
+        {
+            image_sprite = image_sprite_new;
+        }
+
         void ImageView::setScale(float width, float height)
         {
             float scale_x = width / image_sprite.getTexture()->getSize().x;
@@ -75,6 +80,14 @@ namespace UI
             float y_position = image_sprite.getGlobalBounds().getPosition().y;
 
             image_sprite.setPosition(x_position, y_position);
+        }
+        sf::Sprite& ImageView::getSprite()
+        {
+            return image_sprite;
+        }
+        sf::Texture& ImageView::getTexture()
+        {
+            return image_texture;
         }
     }
 }

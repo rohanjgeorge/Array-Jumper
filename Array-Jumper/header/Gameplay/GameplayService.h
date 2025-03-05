@@ -14,7 +14,7 @@ namespace Gameplay
 		GameplayService();
 		~GameplayService();
 
-		void intialize();
+		void initialize();
 		void update();
 		void render();
 

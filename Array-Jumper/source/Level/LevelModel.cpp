@@ -3,7 +3,7 @@
 
 namespace Level
 {
-	LevelModel::LevelModel() {}
+	LevelModel::LevelModel() { current_level_index = 0; }
 	LevelModel::~LevelModel() {}
 
 	BlockType LevelModel::getCurrentBoxValue(int currentPosition)

@@ -3,6 +3,7 @@
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/Player/PlayerController.h"
 #include "../../header/Player/PlayerModel.h"
+#include <iostream>
 
 
 
@@ -54,7 +55,7 @@ namespace Player
 		player_image->initialize(Config::character_texture_path,
 			player_width,
 			player_height,
-			sf::Vector2f(0, 0));
+			sf::Vector2f(200, 300));
 	}
 
 	void PlayerView::calculatePlayerDimensions()
@@ -66,6 +67,8 @@ namespace Player
 
 	void PlayerView::updatePlayerPosition()
 	{
+		sf::Vector2f pos = calulcatePlayerPosition();
+		std::cout << "Player Position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 		player_image->setPosition(calulcatePlayerPosition());
 	}
 
@@ -79,6 +82,26 @@ namespace Player
 
 	void PlayerView::drawPlayer()
 	{
+		/*sf::Texture player_texture;
+		player_texture.loadFromFile(Config::character_texture_path);*/
+
+		//sample to check if draw is working
+		//sf::Sprite tempSprite;
+		//tempSprite.setTexture(player_texture);
+		//tempSprite.setPosition(900.f, 500.f);
+		//tempSprite.setScale(0.5f, 0.5f);
+		//game_window->draw(tempSprite);  // Directly render the sprite
+
+		//sf::Sprite tempSpriteForce;
+		//tempSpriteForce.setTexture(player_image->getTexture());
+		//tempSpriteForce.setPosition(200.f, 500.f);  // Move to center of screen
+		//tempSpriteForce.setScale(0.5f, 0.5f);  // Scale down if needed
+
+		//player_image->setTexture(Config::character_texture_path); //check if texture issue
+		//player_image->setPosition(sf::Vector2f(500.0f, 500.0f));
+		//player_image->setScale(0.5f, 0.5f);  // Scale down if needed
+		
+		//player_image->setSprite(tempSpriteForce); // //check if texture issue
 		player_image->render();
 	}
 

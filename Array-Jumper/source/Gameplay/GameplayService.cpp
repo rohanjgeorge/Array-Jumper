@@ -5,7 +5,7 @@ namespace Gameplay
 	GameplayService::GameplayService() { gameplay_controller = new GameplayController(); }
 	GameplayService::~GameplayService() { destroy(); }
 
-	void GameplayService::intialize() { gameplay_controller->intialize(); }
+	void GameplayService::initialize() { gameplay_controller->intialize(); }
 	void GameplayService::update() { gameplay_controller->update(); }
 	void GameplayService::render() { gameplay_controller->render(); }
 

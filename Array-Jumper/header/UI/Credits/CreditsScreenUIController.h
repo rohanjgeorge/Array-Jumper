@@ -14,7 +14,7 @@ namespace UI
 		private:
 
 			// Constants:
-			const sf::String game_title = "Outscal Presents - Array Jumper";
+			const sf::String game_title = "Array Jumper";
 			const float background_alpha = 85.f;
 			
 			const float text_top_offset = 260.f;

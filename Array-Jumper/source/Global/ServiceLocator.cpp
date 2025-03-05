@@ -50,9 +50,9 @@ namespace Global
 		event_service->initialize();
 		sound_service->initialize();
 		ui_service->initialize();
+		level_service->initialize();
 		player_service->initialize();
-		level_service->intialize();
-		gameplay_service->intialize();
+		gameplay_service->initialize();
 
 	}
 
